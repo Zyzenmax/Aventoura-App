@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_app/base/bottom_nav_bar.dart';
 
 void main() {
+  var myList = ["Flutter", "PHP", "Laravel"];
+  print("${myList[1]}");
   runApp(const MyApp());
 }
 
@@ -10,16 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.red,
-          ),
-          body: const Center(child: Text("Hello World")),
-        ));
+      home: BottomNavBar(),
+    );
   }
 }
