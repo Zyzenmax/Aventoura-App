@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:ticket_app/base/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,16 +19,28 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [Text("Good Morning"), Text("Book Tickets")],
+                      children: [
+                        Text(
+                          "Good Morning",
+                          style: AppStyles.headlinestyle2,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text("Book Tickets", style: AppStyles.headlinestyle1)
+                      ],
                     ),
                     Container(
                       color: Colors.blueAccent,
-                      width: 70,
-                      height: 70,
+                      width: 50,
+                      height: 50,
                     )
                   ],
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
