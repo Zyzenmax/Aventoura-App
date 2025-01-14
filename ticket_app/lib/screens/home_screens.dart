@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Column, Row
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       //We want scrollable efect
       body: ListView(
         children: [
@@ -54,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                         horizontal: 12, vertical: 12),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xff4f6fd)),
+                        color: Color.fromARGB(255, 255, 255, 255)),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
