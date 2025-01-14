@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/widgets/app_double_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsetsDirectional.symmetric(
-                horizontal: 20, vertical: 20),
+                horizontal: 20, vertical: 40),
             child: Column(
               children: [
                 Row(
@@ -27,13 +28,14 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Good Morning",
-                          style: AppStyles.headlinestyle2,
+                          "Aventoura",
+                          style: AppStyles.headlinestyle1,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        Text("Book Tickets", style: AppStyles.headlinestyle1)
+                        Text("Find Your Dream Destination",
+                            style: AppStyles.headlinestyle2)
                       ],
                     ),
                     Container(
@@ -46,15 +48,17 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
+
                 const SizedBox(
-                  height: 25,
+                  height: 30,
                 ),
+
                 // ignore: avoid_unnecessary_containers
                 Container(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 12, vertical: 12),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(20),
                         color: Color.fromARGB(255, 255, 255, 255)),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -68,10 +72,20 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Text("Search")
                       ],
-                    ))
+                    )),
+
+                const SizedBox(
+                  height: 40,
+                ),
+
+                //Upcoming flight text
+                const AppDoubleText(
+                  bigText: 'Upcoming Flights',
+                  smallText: 'View all',
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
     );
