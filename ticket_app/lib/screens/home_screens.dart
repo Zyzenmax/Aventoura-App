@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +14,8 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
+            padding: const EdgeInsetsDirectional.symmetric(
+                horizontal: 20, vertical: 20),
             child: Column(
               children: [
                 Row(
@@ -38,8 +40,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           image: const DecorationImage(
-                              image:
-                                  AssetImage("assets/images/AirPlane.jpeg"))),
+                              image: AssetImage(AppMedia.logo))),
                     )
                   ],
                 ),
