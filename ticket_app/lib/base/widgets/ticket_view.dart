@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/widgets/big_dot.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -14,8 +15,30 @@ class TicketView extends StatelessWidget {
       height: 197,
       child: Container(
         margin: const EdgeInsets.only(right: 16),
+        padding: EdgeInsets.all(16),
+
         // ignore: sort_child_properties_last
-        child: const Center(child: Text("Hello")),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  "NYC",
+                  style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
+                ),
+                const BigDot(),
+                Expanded(
+                  child: Container(),
+                ),
+                const BigDot(),
+                Text(
+                  "NYC",
+                  style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
+                )
+              ],
+            )
+          ],
+        ),
         decoration: BoxDecoration(
             color: AppStyles.ticketBlue,
             borderRadius: const BorderRadius.only(
