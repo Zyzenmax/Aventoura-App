@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 TicketView()
