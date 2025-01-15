@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
+import 'package:ticket_app/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -59,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                         horizontal: 12, vertical: 12),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(255, 255, 255, 255)),
+                        color: const Color.fromARGB(255, 255, 255, 255)),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -82,7 +83,13 @@ class HomeScreen extends StatelessWidget {
                 const AppDoubleText(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
-                )
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                TicketView()
               ],
             ),
           ),
