@@ -45,7 +45,7 @@ class TicketView extends StatelessWidget {
                       ),
                       Center(
                           child: Transform.rotate(
-                              angle: 1.5,
+                              angle: 1.57,
                               child: const Icon(
                                 Icons.local_airport_rounded,
                                 color: Colors.white,
@@ -59,6 +59,31 @@ class TicketView extends StatelessWidget {
                 ),
                 Text(
                   "LDN",
+                  style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              children: [
+                Text(
+                  "New-York",
+                  style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+                Text(
+                  "8H 30M ",
+                  style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+                Text(
+                  "London",
                   style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
                 )
               ],
