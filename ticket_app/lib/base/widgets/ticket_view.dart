@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/widgets/app_layout_builder_widget.dart';
 import 'package:ticket_app/base/widgets/big_dot.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
+
+  get color => null;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +29,31 @@ class TicketView extends StatelessWidget {
                   "NYC",
                   style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
                 ),
-                const BigDot(),
                 Expanded(
                   child: Container(),
                 ),
                 const BigDot(),
+                const Expanded(
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                        height: 19,
+                        child: AppLayoutBuilderWidget(
+                          randomDivider: 6,
+                        ),
+                      ),
+                      // Center(
+                      //   child: Text(
+                      //     "Plane",
+                      //   ),
+                      // )
+                    ],
+                  ),
+                ),
+                const BigDot(),
+                Expanded(
+                  child: Container(),
+                ),
                 Text(
                   "NYC",
                   style: AppStyles.headlinestyle2.copyWith(color: Colors.white),
