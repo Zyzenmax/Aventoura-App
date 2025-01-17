@@ -1,13 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_layout_builder_widget.dart';
+import 'package:ticket_app/base/widgets/big_circle.dart';
 import 'package:ticket_app/base/widgets/big_dot.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
-
-  get color => null;
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +105,19 @@ class TicketView extends StatelessWidget {
                       topRight: Radius.circular(21))),
             ),
 
+            Container(
+              color: AppStyles.ticketOrange,
+              child: Row(children: [
+                const BigCircle(
+                  isLeft: true,
+                ),
+                Expanded(child: Container()),
+                const BigCircle(
+                  isRight: true,
+                )
+              ]),
+            ),
+
             //Container 2
             Container(
               padding: EdgeInsets.all(16),
@@ -184,7 +197,7 @@ class TicketView extends StatelessWidget {
                 ],
               ),
               decoration: BoxDecoration(
-                  color: Colors.orange,
+                  color: AppStyles.ticketOrange,
                   borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(21),
                       bottomRight: Radius.circular(21))),
