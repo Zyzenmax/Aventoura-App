@@ -21,6 +21,7 @@ class TicketView extends StatelessWidget {
         margin: const EdgeInsets.only(right: 16),
         child: Column(
           children: [
+            //Blue part on the ticket
             Container(
               padding: EdgeInsets.all(16),
 
@@ -105,7 +106,7 @@ class TicketView extends StatelessWidget {
                       topLeft: Radius.circular(21),
                       topRight: Radius.circular(21))),
             ),
-
+            //circles and dots
             Container(
               color: AppStyles.ticketOrange,
               child: const Row(children: [
@@ -115,15 +116,14 @@ class TicketView extends StatelessWidget {
                 Expanded(
                     child: AppLayoutBuilderWidget(
                   randomDivider: 20,
-                  widthLine: 9,
+                  widthLine: 7,
                 )),
                 BigCircle(
                   isRight: true,
                 )
               ]),
             ),
-
-            //Container 2
+            //Orange part on the ticket
             Container(
               padding: EdgeInsets.all(16),
 
@@ -133,40 +133,23 @@ class TicketView extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "NYC",
+                        "1 MAY",
                         style: AppStyles.headlinestyle2
                             .copyWith(color: Colors.white),
                       ),
                       Expanded(
                         child: Container(),
                       ),
-                      const BigDot(),
-                      Expanded(
-                        child: Stack(
-                          children: [
-                            const SizedBox(
-                              height: 23.5,
-                              child: AppLayoutBuilderWidget(
-                                randomDivider: 6,
-                                widthLine: 3,
-                              ),
-                            ),
-                            Center(
-                                child: Transform.rotate(
-                                    angle: 1.57,
-                                    child: const Icon(
-                                      Icons.local_airport_rounded,
-                                      color: Colors.white,
-                                    ))),
-                          ],
-                        ),
+                      Text(
+                        "08:00 AM",
+                        style: AppStyles.headlinestyle2
+                            .copyWith(color: Colors.white),
                       ),
-                      const BigDot(),
                       Expanded(
                         child: Container(),
                       ),
                       Text(
-                        "LDN",
+                        "22",
                         style: AppStyles.headlinestyle2
                             .copyWith(color: Colors.white),
                       )
@@ -178,7 +161,7 @@ class TicketView extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "New-York",
+                        "Date",
                         style: AppStyles.headlinestyle2
                             .copyWith(color: Colors.white),
                       ),
@@ -186,7 +169,7 @@ class TicketView extends StatelessWidget {
                         child: Container(),
                       ),
                       Text(
-                        "8H 30M ",
+                        "Depature Time",
                         style: AppStyles.headlinestyle2
                             .copyWith(color: Colors.white),
                       ),
@@ -194,7 +177,7 @@ class TicketView extends StatelessWidget {
                         child: Container(),
                       ),
                       Text(
-                        "London",
+                        "Number",
                         style: AppStyles.headlinestyle2
                             .copyWith(color: Colors.white),
                       )
