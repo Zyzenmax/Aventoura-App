@@ -45,6 +45,7 @@ class TicketView extends StatelessWidget {
                               height: 23.5,
                               child: AppLayoutBuilderWidget(
                                 randomDivider: 6,
+                                widthLine: 3,
                               ),
                             ),
                             Center(
@@ -107,12 +108,16 @@ class TicketView extends StatelessWidget {
 
             Container(
               color: AppStyles.ticketOrange,
-              child: Row(children: [
-                const BigCircle(
+              child: const Row(children: [
+                BigCircle(
                   isLeft: true,
                 ),
-                Expanded(child: Container()),
-                const BigCircle(
+                Expanded(
+                    child: AppLayoutBuilderWidget(
+                  randomDivider: 20,
+                  widthLine: 9,
+                )),
+                BigCircle(
                   isRight: true,
                 )
               ]),
@@ -143,6 +148,7 @@ class TicketView extends StatelessWidget {
                               height: 23.5,
                               child: AppLayoutBuilderWidget(
                                 randomDivider: 6,
+                                widthLine: 3,
                               ),
                             ),
                             Center(

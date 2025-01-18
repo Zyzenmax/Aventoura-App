@@ -3,8 +3,10 @@ import 'package:flutter/rendering.dart';
 
 class AppLayoutBuilderWidget extends StatelessWidget {
   final int randomDivider;
+  final double widthLine;
 
-  const AppLayoutBuilderWidget({super.key, required this.randomDivider});
+  const AppLayoutBuilderWidget(
+      {super.key, required this.randomDivider, required this.widthLine});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +18,10 @@ class AppLayoutBuilderWidget extends StatelessWidget {
           direction: Axis.horizontal,
           children: List.generate(
             (constraints.constrainWidth() / randomDivider).floor(),
-            (index) => const SizedBox(
-                width: 3,
+            (index) => SizedBox(
+                width: widthLine,
                 height: 1,
-                child: DecoratedBox(
+                child: const DecoratedBox(
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
