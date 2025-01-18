@@ -17,4 +17,6 @@ class AppStyles {
       const TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
   static TextStyle headlinestyle3 =
       TextStyle(fontSize: 21, fontWeight: FontWeight.bold, color: textColor);
+  static TextStyle headlinestyle4 =
+      const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 }

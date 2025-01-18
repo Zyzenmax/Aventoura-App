@@ -30,10 +30,13 @@ class TicketView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        "NYC",
-                        style: AppStyles.headlinestyle2
-                            .copyWith(color: Colors.white),
+                      SizedBox(
+                        width: 50,
+                        child: Text(
+                          "NYC",
+                          style: AppStyles.headlinestyle2
+                              .copyWith(color: Colors.white),
+                        ),
                       ),
                       Expanded(
                         child: Container(),
@@ -63,10 +66,14 @@ class TicketView extends StatelessWidget {
                       Expanded(
                         child: Container(),
                       ),
-                      Text(
-                        "LDN",
-                        style: AppStyles.headlinestyle2
-                            .copyWith(color: Colors.white),
+                      SizedBox(
+                        width: 50,
+                        child: Text(
+                          "LDN",
+                          textAlign: TextAlign.end,
+                          style: AppStyles.headlinestyle2
+                              .copyWith(color: Colors.white),
+                        ),
                       )
                     ],
                   ),
@@ -75,26 +82,33 @@ class TicketView extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Text(
-                        "New-York",
-                        style: AppStyles.headlinestyle2
-                            .copyWith(color: Colors.white),
+                      SizedBox(
+                        width: 107.5,
+                        child: Text(
+                          "New-York",
+                          style: AppStyles.headlinestyle4
+                              .copyWith(color: Colors.white),
+                        ),
                       ),
                       Expanded(
                         child: Container(),
                       ),
                       Text(
                         "8H 30M ",
-                        style: AppStyles.headlinestyle2
+                        style: AppStyles.headlinestyle4
                             .copyWith(color: Colors.white),
                       ),
                       Expanded(
                         child: Container(),
                       ),
-                      Text(
-                        "London",
-                        style: AppStyles.headlinestyle2
-                            .copyWith(color: Colors.white),
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          "London",
+                          textAlign: TextAlign.end,
+                          style: AppStyles.headlinestyle4
+                              .copyWith(color: Colors.white),
+                        ),
                       )
                     ],
                   )
